@@ -78,6 +78,15 @@ public class DosenMain {
                     break;
 
                 case 5:
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    sc.nextLine();
+                    String cari = sc.nextLine();
+                    System.out.println("\n=== HASIL PENCARIAN JADWAL ===");
+                    int posisi = listJadwalDosen.sequentialSearching(cari);
+                    if (posisi == -1) {
+                        System.out.printf("Data dosen dengan nama \"%s\" tidak ditemukan.\n\n", cari);
+                    }
+                    listJadwalDosen.tampilDataPencarian(posisi);
                     break;
             }
         } while (menu != 0);

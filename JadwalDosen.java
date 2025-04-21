@@ -38,7 +38,7 @@ public class JadwalDosen {
         for (int i = 0; i < idx; i++) {
             listJadwal[i].tampilData();
         }
-        System.out.println(); 
+        System.out.println();
     }
 
     // Selection Sort
@@ -80,15 +80,24 @@ public class JadwalDosen {
         }
     }
 
-        public int sequentialSearching(String cari) {
-            int posisi = -1;
-            for (int j = 0; j < listJadwal.length; j++) {
-              if (listJadwal[j].dosen.namaDosen == cari) {
+    public int sequentialSearching(String cari) {
+        int posisi = -1;
+        for (int j = 0; j < listJadwal.length; j++) {
+            if (listJadwal[j].dosen.namaDosen.equals(cari)) {
                 posisi = j;
                 break;
-              }
             }
-            return posisi;
-
+        }
+        return posisi;
     }
-}   
+
+    void tampilDataPencarian(int posisi) {
+        if (posisi != -1) {
+            System.out.println("\n=== HASIL PENCARIAN JADWAL ===");
+            System.out.printf("Dosen: %s\n", listJadwal[posisi].dosen.namaDosen);
+            System.out.printf("Mata Kuliah: %s\n", listJadwal[posisi].matakuliah.namaMK);
+            System.out.printf("Hari: %s\n", listJadwal[posisi].hari);
+            System.out.printf("Jam: %s\n\n", listJadwal[posisi].jam);
+        }
+    }
+}
