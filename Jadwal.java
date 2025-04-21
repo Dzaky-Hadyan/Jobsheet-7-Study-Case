@@ -11,4 +11,5 @@ public class Jadwal {
         this.jam = jam;
     }
 
+
 }

@@ -14,11 +14,18 @@ public class DosenMain {
         MataKuliah m1 = new MataKuliah("MK001", "Struktur Data", 3);
         MataKuliah m2 = new MataKuliah("MK002", "Pemrograman Java", 3);
         MataKuliah m3 = new MataKuliah("MK003", "Basis Data", 3);
-        MataKuliah m4 = new MataKuliah("MK004", "Algoritma dan Pemrograman", 3);
-        MataKuliah m5 = new MataKuliah("MK005", "Matematika Diskrit", 3);
+        MataKuliah m4 = new MataKuliah("MK004", "Algoritma dan Pemrograman", 2);
+        MataKuliah m5 = new MataKuliah("MK005", "Matematika Diskrit", 2);
         MataKuliah m6 = new MataKuliah("MK006", "Jaringan Komputer", 3);
         MataKuliah m7 = new MataKuliah("MK007", "Pemrograman Web", 3);
-        
+        listMatkul.tambah(m1);
+        listMatkul.tambah(m2);
+        listMatkul.tambah(m3);
+        listMatkul.tambah(m4);
+        listMatkul.tambah(m5);
+        listMatkul.tambah(m6);
+        listMatkul.tambah(m7);
+
         JadwalDosen listJadwalDosen = new JadwalDosen();
         Jadwal j1 = new Jadwal(d1, m1, "Senin", "08:00");
         Jadwal j2 = new Jadwal(d2, m2, "Selasa", "10:00");
@@ -27,7 +34,15 @@ public class DosenMain {
         Jadwal j5 = new Jadwal(d4, m5, "Jumat", "07:00");
         Jadwal j6 = new Jadwal(d5, m6, "Senin", "11:00");
         Jadwal j7 = new Jadwal(d2, m7, "Rabu", "14:00");
-        
+
+        listJadwalDosen.tambahJadwal(j1);
+        listJadwalDosen.tambahJadwal(j2);
+        listJadwalDosen.tambahJadwal(j3);
+        listJadwalDosen.tambahJadwal(j4);
+        listJadwalDosen.tambahJadwal(j5);
+        listJadwalDosen.tambahJadwal(j6);
+        listJadwalDosen.tambahJadwal(j7);
+
         int menu = 0;
         do {
             System.out.println("1. Tampilkan Data Dosen");
@@ -40,9 +55,9 @@ public class DosenMain {
             menu = sc.nextInt();
             switch (menu) {
                 case 1:
-                    
+
                     break;
-            
+
                 case 2:
 
                     break;
