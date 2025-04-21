@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class DosenMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        DataDosen list = new DataDosen();
+        Dosen d1 = new Dosen("D001", "Budi Hartono");
         int menu = 0;
         do {
             System.out.println("1. Tampilkan Data Dosen");

@@ -8,6 +8,6 @@ public class Dosen {
 
     void tampilData() {
         System.out.printf("NIDN: %d\n", nidn);
-        System.out.printf("Nama: %s", namaDosen);
+        System.out.printf("Nama: %s\n\n", namaDosen);
     }
 }
