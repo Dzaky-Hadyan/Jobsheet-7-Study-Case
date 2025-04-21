@@ -5,6 +5,11 @@ public class DosenMain {
         Scanner sc = new Scanner(System.in);
         DataDosen list = new DataDosen();
         Dosen d1 = new Dosen("D001", "Budi Hartono");
+        Dosen d2 = new Dosen("D002", "Rina Marlina");
+        Dosen d3 = new Dosen("D003", "Agus Wijaya");
+        Dosen d4 = new Dosen("D004", "Siti Aminah");
+        Dosen d5 = new Dosen("D005", "Andi Pratama");
+        
         int menu = 0;
         do {
             System.out.println("1. Tampilkan Data Dosen");
