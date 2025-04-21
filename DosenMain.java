@@ -72,6 +72,9 @@ public class DosenMain {
                     break;
 
                 case 4:
+                    listJadwalDosen.SortingASC();
+                    System.out.println("=== JADWAL KULIAH TERURUT (Hari & Jam) ===");
+                    listJadwalDosen.tampilJadwal();
                     break;
 
                 case 5:
