@@ -94,11 +94,10 @@ public class JadwalDosen {
 
     void tampilDataPencarian(int posisi) {
         if (posisi != -1) {
-            System.out.println("\n=== HASIL PENCARIAN JADWAL ===");
             System.out.printf("Dosen: %s\n", listJadwal[posisi].dosen.namaDosen);
             System.out.printf("Mata Kuliah: %s\n", listJadwal[posisi].matakuliah.namaMK);
             System.out.printf("Hari: %s\n", listJadwal[posisi].hari);
             System.out.printf("Jam: %s\n\n", listJadwal[posisi].jam);
         }
-    }
+    }    
 }

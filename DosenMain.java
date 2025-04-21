@@ -85,8 +85,9 @@ public class DosenMain {
                     int posisi = listJadwalDosen.sequentialSearching(cari);
                     if (posisi == -1) {
                         System.out.printf("Data dosen dengan nama \"%s\" tidak ditemukan.\n\n", cari);
+                    } else {
+                        listJadwalDosen.tampilDataPencarian(posisi);
                     }
-                    listJadwalDosen.tampilDataPencarian(posisi);
                     break;
             }
         } while (menu != 0);
