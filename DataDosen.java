@@ -1,5 +1,5 @@
 public class DataDosen {
-    Dosen[] list = new Dosen[7];
+    Dosen[] list = new Dosen[5];
     int idx;
 
     void tambah(Dosen list) {
@@ -10,6 +10,7 @@ public class DataDosen {
             System.out.println("Data sudah penuh");
         }
     }
+
     void tampilDataDosen() {
         System.out.println("=== DATA DOSEN ===");
         for (Dosen dosen : list) {

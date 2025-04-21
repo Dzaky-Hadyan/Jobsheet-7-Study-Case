@@ -9,6 +9,11 @@ public class DosenMain {
         Dosen d3 = new Dosen("D003", "Agus Wijaya");
         Dosen d4 = new Dosen("D004", "Siti Aminah");
         Dosen d5 = new Dosen("D005", "Andi Pratama");
+        list.tambah(d1);
+        list.tambah(d2);
+        list.tambah(d3);
+        list.tambah(d4);
+        list.tambah(d5);
 
         ListMatkul listMatkul = new ListMatkul();
         MataKuliah m1 = new MataKuliah("MK001", "Struktur Data", 3);
@@ -40,7 +45,7 @@ public class DosenMain {
             menu = sc.nextInt();
             switch (menu) {
                 case 1:
-                    
+                    list.tampilDataDosen();
                     break;
             
                 case 2:

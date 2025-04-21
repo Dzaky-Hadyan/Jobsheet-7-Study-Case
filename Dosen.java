@@ -7,7 +7,7 @@ public class Dosen {
     }
 
     void tampilData() {
-        System.out.printf("NIDN: %d\n", nidn);
+        System.out.printf("NIDN: %s\n", nidn);
         System.out.printf("Nama: %s\n\n", namaDosen);
     }
 }
