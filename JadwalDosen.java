@@ -50,4 +50,15 @@ public class JadwalDosen {
         //         dataDosen[j + 1] = temp;
         //     }
         // }
+
+    void tampilDataJadwal() {
+        System.out.println("=== DATA JADWAL KULIAH ===");
+        for (Jadwal jadwal : listJadwal) {
+            System.out.printf("Dosen\t\t: %s\n", jadwal.dosen.namaDosen);
+            System.out.printf("Mata Kuliah\t: %s\n", jadwal.matakuliah.namaMK);
+            System.out.printf("SKS\t\t: %s\n", jadwal.matakuliah.sks);
+            System.out.printf("Hari\t\t: %s\n", jadwal.hari);
+            System.out.printf("Jam\t\t: %s\n", jadwal.jam);
+        }
+    }
 }
