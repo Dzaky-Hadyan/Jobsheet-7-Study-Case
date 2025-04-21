@@ -60,7 +60,7 @@ public class DosenMain {
             menu = sc.nextInt();
             switch (menu) {
                 case 1:
-list.tampilDataDosen();
+                    list.tampilDataDosen();
                     break;
 
                 case 2:
