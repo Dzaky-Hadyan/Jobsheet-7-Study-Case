@@ -77,6 +77,7 @@ public class JadwalDosen {
             System.out.printf("SKS\t\t: %s\n", jadwal.matakuliah.sks);
             System.out.printf("Hari\t\t: %s\n", jadwal.hari);
             System.out.printf("Jam\t\t: %s\n", jadwal.jam);
+            System.out.println();
         }
     }
 }
