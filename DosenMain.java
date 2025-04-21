@@ -64,11 +64,17 @@ public class DosenMain {
                     break;
 
                 case 2:
-
+                    listMatkul.tampilDataMataKuliah();
                     break;
 
                 case 3:
+                    listJadwalDosen.tampilDataJadwal();
+                    break;
 
+                case 4:
+                    break;
+
+                case 5:
                     break;
             }
         } while (menu != 0);
