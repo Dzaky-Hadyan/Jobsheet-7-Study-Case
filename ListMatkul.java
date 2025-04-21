@@ -16,6 +16,7 @@ public class ListMatkul {
             System.out.printf("Kode MK\t\t: %s\n", mataKuliah.kodeMK);
             System.out.printf("Nama Mata Kuliah: %s\n", mataKuliah.namaMK);
             System.out.printf("SKS\t\t: %d\n", mataKuliah.sks);
+            System.out.println();
         }
     }
 }
