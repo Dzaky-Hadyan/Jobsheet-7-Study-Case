@@ -34,40 +34,58 @@ public class JadwalDosen {
         }
     }
 
+    void selectionSortASC() {
+        for (int i = 0; i < idx - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < idx; j++) {
+                if (listJadwal[j].kodeHari < listJadwal[minIndex].kodeHari ||
+                        (listJadwal[j].kodeHari == listJadwal[minIndex].kodeHari &&
+                                listJadwal[j].jamjam < listJadwal[minIndex].jamjam)) {
+                    minIndex = j;
+                }
+            }
+            // Swap
+            Jadwal temp = listJadwal[minIndex];
+            listJadwal[minIndex] = listJadwal[i];
+            listJadwal[i] = temp;
+        }
+    }
+
+    void insertionSortASC() {
+        for (int i = 1; i < idx; i++) {
+            Jadwal temp = listJadwal[i];
+            int j = i - 1;
+
+            // Bandingkan kodeHari dan jamjam
+            while (j >= 0 &&
+                    (listJadwal[j].kodeHari > temp.kodeHari ||
+                            (listJadwal[j].kodeHari == temp.kodeHari && listJadwal[j].jamjam > temp.jamjam))) {
+                listJadwal[j + 1] = listJadwal[j];
+                j--;
+            }
+
+            listJadwal[j + 1] = temp;
+        }
+    }
+
+    void sortByNamaDosenASC() {
+        for (int i = 0; i < idx - 1; i++) {
+            for (int j = 0; j < idx - 1 - i; j++) {
+                if (listJadwal[j].dosen.namaDosen.compareToIgnoreCase(listJadwal[j + 1].dosen.namaDosen) > 0) {
+                    Jadwal temp = listJadwal[j];
+                    listJadwal[j] = listJadwal[j + 1];
+                    listJadwal[j + 1] = temp;
+                }
+            }
+        }
+    }
+
     public void tampilJadwal() {
         for (int i = 0; i < idx; i++) {
             listJadwal[i].tampilData();
         }
         System.out.println();
     }
-
-    // Selection Sort
-    // void sortingDSC() {
-    // for (int i = 0; i < idx - 1; i++) {
-    // int idxMax = i;
-    // for (int j = i + 1; j < idx; j++) {
-    // if (dataDosen[j].usia > dataDosen[idxMax].usia) {
-    // idxMax = j;
-    // }
-    // }
-    // Dosen01 temp = dataDosen[idxMax];
-    // dataDosen[idxMax] = dataDosen[i];
-    // dataDosen[i] = temp;
-    // }
-    // }
-
-    // Insertion Sort
-    // void insertionSort() {
-    // for (int i = 1; i < idx; i++) {
-    // Dosen01 temp = dataDosen[i];
-    // int j = i - 1;
-    // while (j >= 0 && dataDosen[j].usia < temp.usia) {
-    // dataDosen[j + 1] = dataDosen[j];
-    // j--;
-    // }
-    // dataDosen[j + 1] = temp;
-    // }
-    // }
 
     void tampilDataJadwal() {
         System.out.println("=== DATA JADWAL KULIAH ===");
@@ -90,6 +108,26 @@ public class JadwalDosen {
             }
         }
         return posisi;
+    }
+
+    public int binarySearch(String cari) {
+        int left = 0;
+        int right = idx - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int compare = listJadwal[mid].dosen.namaDosen.compareToIgnoreCase(cari);
+
+            if (compare == 0) {
+                return mid;
+            } else if (compare < 0) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return -1;
     }
 
     void tampilDataPencarian(int posisi) {

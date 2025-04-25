@@ -55,6 +55,7 @@ public class DosenMain {
             System.out.println("3. Tampilkan Data Jadwal");
             System.out.println("4. Urutkan Jadwal Berdasarkan Hari & Jam");
             System.out.println("5. Cari Jadwal Berdasarkan Nama Dosen");
+            System.out.println("6. Cari Jadwal dengan Binary Search (Nama Dosen)");
             System.out.println("0. Keluar");
             System.out.print("Menu: ");
             menu = sc.nextInt();
@@ -88,6 +89,22 @@ public class DosenMain {
                     }
                     listJadwalDosen.tampilDataPencarian(posisi);
                     break;
+                case 6:
+                    System.out.print("Masukkan nama dosen yang dicari (binary): ");
+                    sc.nextLine();
+                    String cariBinary = sc.nextLine();
+
+                    // Urutkan terlebih dahulu berdasarkan nama dosen
+                    listJadwalDosen.sortByNamaDosenASC();
+
+                    int posisiBinary = listJadwalDosen.binarySearch(cariBinary);
+                    if (posisiBinary == -1) {
+                        System.out.printf("Data dosen dengan nama \"%s\" tidak ditemukan.\n\n", cariBinary);
+                    } else {
+                        listJadwalDosen.tampilDataPencarian(posisiBinary);
+                    }
+                    break;
+
             }
         } while (menu != 0);
         sc.close();
