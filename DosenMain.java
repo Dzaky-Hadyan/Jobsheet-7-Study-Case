@@ -32,12 +32,12 @@ public class DosenMain {
         listMatkul.tambah(m7);
 
         JadwalDosen listJadwalDosen = new JadwalDosen();
-        Jadwal j1 = new Jadwal(d1, m1, "Senin", "08:00");
+        Jadwal j6 = new Jadwal(d1, m1, "Senin", "08:00");
         Jadwal j2 = new Jadwal(d2, m2, "Selasa", "10:00");
         Jadwal j3 = new Jadwal(d3, m3, "Rabu", "09:00");
         Jadwal j4 = new Jadwal(d1, m4, "Kamis", "13:00");
         Jadwal j5 = new Jadwal(d4, m5, "Jumat", "07:00");
-        Jadwal j6 = new Jadwal(d5, m6, "Senin", "11:00");
+        Jadwal j1 = new Jadwal(d5, m6, "Senin", "11:00");
         Jadwal j7 = new Jadwal(d2, m7, "Rabu", "14:00");
 
         listJadwalDosen.tambahJadwal(j1);
@@ -86,8 +86,9 @@ public class DosenMain {
                     int posisi = listJadwalDosen.sequentialSearching(cari);
                     if (posisi == -1) {
                         System.out.printf("Data dosen dengan nama \"%s\" tidak ditemukan.\n\n", cari);
+                    } else {
+                        listJadwalDosen.tampilDataPencarian(posisi);
                     }
-                    listJadwalDosen.tampilDataPencarian(posisi);
                     break;
                 case 6:
                     System.out.print("Masukkan nama dosen yang dicari (binary): ");
